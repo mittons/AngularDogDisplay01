@@ -1,0 +1,15 @@
+<style>
+    .pill {
+        border-radius: 0.8rem;
+        padding-inline: 0.9rem;
+        padding-block: 0.45rem;
+        --pill-accent: oklch(53.18% 0.28 296.97);
+        background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+        border: 1;
+        color: var(--pill-accent);
+        font-size: 0.900rem;
+        font-weight: 500;
+    }
+</style>
+
+<button class="pill" (click)="requestList()">Display Dog Breeds, Please!</button>
