@@ -15,6 +15,15 @@
     padding-top: 115px;
     margin-inline: 6px;
   }
+
+  #progress-spinner-container{
+    padding-top: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
 </style>
 
 <div id="top-container">
@@ -22,6 +31,9 @@
   <div fxLayout="row" fxLayoutAlign="center start" style="background-color: white;">
     <app-dog-breed-button class="button-container" (dogBreedListRequested)="onListRequested()"></app-dog-breed-button>
   </div>
+</div>
+<div id="progress-spinner-container" *ngIf="isLoading">
+  <mat-progress-spinner class="progress-spinner" mode="indeterminate" [diameter]="25"></mat-progress-spinner>
 </div>
 <div id="scrollable-list">
   <app-dog-breed-list  [dogBreedList]="dogBreedList"></app-dog-breed-list>
